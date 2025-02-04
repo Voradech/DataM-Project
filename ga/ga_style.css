@@ -1,0 +1,38 @@
+body {
+    background-color: #f5f5dc;
+    background-image: linear-gradient(to right, #e6dac8, #f5f5dc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    max-width: 500px;
+    padding: 20px;
+    
+    border: 5px solid #8c7b75;  /* กำหนดกรอบให้กับคอนเทนเนอร์ */
+    border-radius: 15px; /* ทำมุมของกรอบให้มน */
+    background-color: rgba(255, 255, 255, 0.9); /* พื้นหลังภายในกรอบ */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* background-image: url("download.jpg"); */
+    
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #6b4f4f;
+}
+button {
+    width: 100%;
+    background-color: #8c7b75;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #6b4f4f;
+}

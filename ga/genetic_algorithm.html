@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic Algorithm Knapsack Problem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ga_style.css">
+</head>
+<body>
+
+<!-- Include Bootstrap CSS (can be added in the head of your HTML) -->
+
+<div class="container mt-5">
+    <h3>Genetic Algorithm Optimization</h3>
+    <form id="gaForm">
+        <div class="mb-3">
+            <label for="number_of_items" class="form-label">Number of Items</label>
+            <input type="number" class="form-control" id="number_of_items" value="10" required>
+        </div>
+        <div class="mb-3">
+            <label for="max_weight" class="form-label">Max Weight</label>
+            <input type="number" class="form-control" id="max_weight" value="30" required>
+        </div>
+        <div class="mb-3">
+            <label for="population_size" class="form-label">Population Size</label>
+            <input type="number" class="form-control" id="population_size" value="30" required>
+        </div>
+        <div class="mb-3">
+            <label for="mutation_rate" class="form-label">Mutation Rate</label>
+            <input type="number" step="0.01" class="form-control" id="mutation_rate" value="0.1" required>
+        </div>
+        <div class="mb-3">
+            <label for="selection_method" class="form-label">Selection Method</label>
+            <select class="form-select" id="selection_method" required>
+                <option value="elitism">Elitism</option>
+                <option value="tournament">Tournament</option>
+                <option value="ranking">Ranking</option>
+            </select>
+        </div>
+        <button type="submit" >Run Algorithm</button>
+    </form>
+
+    <div id="result" class="mt-4"></div>
+</div>
+
+<!-- Include Bootstrap JS (optional, for any interactive components) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="ga.js"></script>
+
+</body>
+</html>

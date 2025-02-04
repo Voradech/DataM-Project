@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การทำนายผลการแข่งขัน</title>
+    <link rel="stylesheet" href="ann_style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel panel-box">
+            <h2>การทำนายผลการแข่งขัน: ชนะ หรือ แพ้</h2>
+
+            <!-- กรอกแค่ 2 ตัว -->
+            <div class="mb-3">
+                <label for="equipmentQuality" class="form-label">คุณภาพของอุปกรณ์ (1-10):</label>
+                <input type="number" id="equipmentQuality" class="form-control" min="1" max="10" value="0" step="1">
+            </div>
+
+            <div class="mb-3">
+                <label for="weatherCondition" class="form-label">สภาพอากาศ (1-10):</label>
+                <input type="number" id="weatherCondition" class="form-control" min="1" max="10" value="0" step="1">
+            </div>
+
+            <div class="button-group">
+                <button onclick="trainPerceptron()">ทำนายผลการแข่งขัน</button>
+                <button onclick="resetForm()">รีเซ็ต</button>
+            </div>
+        </div>
+
+        <div class="right-panel panel-box">
+            <h2>ผลการทำนาย</h2>
+            <div class="result-box">
+                <p id="result"></p>
+
+                <h3>ค่าน้ำหนักและ Bias ปัจจุบัน</h3>
+                <p id="weights"></p>
+            </div>
+
+            <h2>ข้อมูล Dataset</h2>
+
+            <div class="panel-box">
+                <table id="datasetTable">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Input 1</th>
+                            <th>Input 2</th>
+                            <th>Prediction</th>
+                            <th>Weight 1</th>
+                            <th>Weight 2</th>
+                            <th>Bias</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <br>
+                <button class="right-align-button" onclick="toggleDataset()">ซ่อน / แสดง Dataset</button>
+            </div>
+
+            
+            <h2>Error Cost</h2>
+            <div class="panel-box">
+            <canvas id="errorChart"></canvas>
+        </div>
+            <!-- <h3>Error Surface (3D Plot)</h3>
+            <div id="errorSurface"></div> -->
+
+            <h2>การเคลื่อนที่ของ Weight เข้าใกล้เป้าหมาย</h2>
+            <div class="panel-box">
+            <canvas id="weightGraph" width="400" height="300"></canvas>
+ </div>
+            <!-- Import Plotly.js -->
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        </div>
+    </div>
+
+    <!-- เชื่อมกับไฟล์ JavaScript แยก -->
+    <script src="ann_function.js"></script>
+
+</body>
+
+</html>

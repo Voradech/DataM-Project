@@ -1,0 +1,80 @@
+/* พื้นหลังของหน้า Index */
+body {
+    background-color: #f4f4f4;
+    background-image: linear-gradient(to right, #ffefd5, #f5d6ba); /* ไล่สีโทนอุ่น */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* กล่องเนื้อหาหลัก */
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    max-width: 600px;
+}
+
+/* หัวข้อหลัก */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ส่วนของแต่ละเทคนิค */
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* หัวข้อแต่ละเทคนิค */
+h2 {
+    color: #6b4f4f;
+}
+
+/* ข้อความอธิบาย */
+p {
+    color: #666;
+}
+
+/* ปุ่ม */
+.btn {
+    width: 80%;
+    max-width: 250px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* ปรับสีปุ่มให้เข้ากับธีม */
+.btn-primary {
+    background-color: #6b4f4f;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #8c7b75;
+}
+
+.btn-success {
+    background-color: #8c7b75;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #6b4f4f;
+}
